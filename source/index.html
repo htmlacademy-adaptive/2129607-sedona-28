@@ -1,12 +1,129 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="'page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+  <body class="page__body">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+    <header class="main-header">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="./img/logo.svg" width="185" height="96" alt="Седона">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg aria-hidden="true" width="23" height="22" fill="#81B3D2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z"/>
+            <path d="M22.9 9H0V13H22.9V9Z"/>
+            <path d="M22.9 18H0V22H22.9V18Z"/>
+            </svg>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item nav-list__item--current">
+              <a>Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Фото и видео</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Форма Отзыва</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h1 class="visually-hidden">Седона - туристический городок</h1>
+      <section class="intro">
+        <div class="intro__wrapper">
+          <img src="./img/back-mobile.jpg.jpg" width="320" height="389" alt="Горный вид">
+          <h2 class="intro__title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h2>
+          <p class="intro__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
+      </section>
+
+      <section class="reasons">
+        <div class="reasons__wrapper">
+          <h2 class="visually-hidden">Причины выбрать Седону</h2>
+          <ul class="reasons__list">
+            <li class="reasons__item reasons__item--with-image">
+              <img src="./img/photo-city@1x 1.jpg" alt="Вид на город">
+              <h3 class="reasons__title">НАСТОЯЩИЙ ГОРОДОК</h3>
+              <h4 class="reasons__subtitle">— №1 —</h4>
+              <p class="reasons__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+              <ul class="reasons__benefit benefit__list">
+                <li class="benefit__item benefit__item--house">
+                  <h3 class="benefit__title">Жилье</h3>
+                  <p class="benefit_discription">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </li>
+                <li class="benefit__item benefit__item--meal">
+                  <h3 class="benefit__title">ЕДА</h3>
+                  <p class="benefit_discription">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                </li>
+                <li class="benefit__item benefit__item--souvenir">
+                  <h3 class="benefit__title">СУВЕНИРЫ</h3>
+                  <p class="benefit_discription">Не только китайского, но и местного производства!</p>
+                </li>
+              </ul>
+            </li>
+            <li class="reasons__item reasons__item--with-image">
+              <img src="./img/photo-bridge@1x 1.png" alt="Вид на мост">
+              <h3 class="reasons__title">ТАМ ЕСТЬ Мост дьявола</h3>
+              <h4 class="reasons__subtitle">— №2 —</h4>
+              <p class="reasons__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </li>
+            <li class="reasons__item">
+              <h3 class="reasons__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+              <h4 class="reasons__subtitle">— №3 —</h4>
+              <p class="reasons__description">ВСЕ интересные места находятся очень близко</p>
+            </li>
+            <li class="reasons__item">
+              <h3 class="reasons__title">КРАСИВАЯ ДОРОГА</h3>
+              <h4 class="reasons__subtitle">— №4 —</h4>
+              <p class="reasons__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+            </li>
+            <li class="reasons__item">
+              <h3 class="reasons__title">МАЛО ТУРИСТОВ</h3>
+              <h4 class="reasons__subtitle">— №5 —</h4>
+              <p class="reasons__description">Большинство едет в гранд каньон и толпится там</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="invite">
+        <h2 class="invite__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
+        <p class="invite__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button class="invite__button">Найти Гостиницу</button>
+        <img src="./img/map-mobile.jpg.jpg">
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <p class="main-footer__hashtag">#visitSEDONA</p>
+        <ul class="main-footer__social social__list">
+          <li class="social__item social__item--vk"><a href="#">ВКонтакте</a></li>
+          <li class="social__item social__item--tg"><a href="#">Telegram</a></li>
+          <li class="social__item social__item--yt"><a href="#">YouTube</a></li>
+        </ul>
+        <div class="main-footer__copyright copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__link" href="#"><svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.65 0.449951H14.55L1.05 1.84995V26.55L14.55 34.5499L27.95 26.55V1.84995L14.65 0.449951ZM26.05 12.55L14.55 5.74995V5.64995H14.45L14.35 5.54995V5.64995L2.95 12.55V3.54995L14.45 2.34995L26.05 3.54995V12.55ZM14.45 7.24995L25.95 13.95L21.45 16.55L14.35 12.35V13.75L20.25 17.25L19.35 17.75L14.35 14.75V16.15L18.15 18.45L17.35 18.95L14.35 17.15V18.55L16.25 19.65L14.45 20.75L3.05 14.05L14.45 7.24995ZM2.95 15.55L14.35 22.35V23.35L6.45 18.65V20.05L14.45 24.85V25.95L6.45 21.25V22.65L14.45 27.45L22.55 22.55V17.35L25.95 15.35V25.35L14.45 32.25L2.95 25.45V15.55Z" fill="black"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
