@@ -1,0 +1,22 @@
+.nav-list {
+  background-color: $secondary-color;
+  color: $common-color;
+
+  @include list-reset;
+}
+
+.nav-list__item {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 17px;
+  padding-bottom: 12px;
+}
+
+.nav-list__link {
+  color: $common-color;
+  text-decoration: none;
+}

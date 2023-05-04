@@ -1,2 +1,13 @@
-// Начните писать стили здесь
-body { background: navajowhite; }
+//вспомогательные стили
+@import './supportive/list-reset.scss';
+@import './supportive/visually-hidden.scss';
+@import './supportive/variables.scss';
+
+//стили блоков
+@import './page.scss';
+@import './main-header.scss';
+@import './nav-list.scss';
+
+// body {
+//   background-color: #b77a2c;
+// }
