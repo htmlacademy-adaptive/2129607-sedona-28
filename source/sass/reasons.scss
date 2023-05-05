@@ -1,0 +1,40 @@
+.reasons__list {
+  @include list-reset;
+  background-color: #eeeeee;
+}
+
+.reasons__item {
+  padding: 0;
+
+  &--with-image {
+    background-color: $secondary-color;
+    color: $common-color;
+  }
+}
+
+.reasons__title {
+  margin-top: 24px;
+  margin-bottom: 11px;
+
+  @include common-title;
+}
+
+.reasons__subtitle,
+.reasons__description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.reasons__description {
+  margin-bottom: 24px;
+}
+
+.reasons__subtitle {
+  margin-bottom: 17px;
+}
