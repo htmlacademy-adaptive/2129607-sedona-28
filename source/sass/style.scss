@@ -1,20 +1,21 @@
 //вспомогательные стили
-@import "./supportive/list-reset.scss";
-@import './supportive/visually-hidden.scss';
-@import './supportive/variables.scss';
-@import './supportive/common-title.scss';
+@import "./supportive/mixins.scss";
+@import "./supportive/variables.scss";
+@import "./supportive/mixins.scss";
+@import "./supportive/visually-hidden.scss";
+@import "./supportive/caption.scss";
 
 //стили блоков
-@import './page.scss';
-@import './main-header.scss';
-@import './nav-list.scss';
-@import './intro.scss';
-@import './reasons.scss';
-@import './benefit.scss';
-@import './invite.scss';
-@import './main-footer.scss';
-@import './social.scss';
-@import './copyright.scss';
+@import "./bloks/page.scss";
+@import "./bloks/main-header.scss";
+@import "./bloks/nav-list.scss";
+@import "./bloks/intro.scss";
+@import "./bloks/reasons.scss";
+@import "./bloks/benefit.scss";
+@import "./bloks/invite.scss";
+@import "./bloks/main-footer.scss";
+@import "./bloks/social.scss";
+@import "./bloks/copyright.scss";
 
 // body {
 //   background-color: #b77a2c;
