@@ -4,6 +4,7 @@
 @import "./supportive/mixins.scss";
 @import "./supportive/visually-hidden.scss";
 @import "./supportive/caption.scss";
+@import "./supportive/button.scss";
 
 //стили блоков
 @import "./bloks/page.scss";
@@ -16,6 +17,11 @@
 @import "./bloks/main-footer.scss";
 @import "./bloks/social.scss";
 @import "./bloks/copyright.scss";
+@import "./bloks/catalog.scss";
+@import "./bloks/card.scss";
+@import "./bloks/ending.scss";
+@import "./bloks/form.scss";
+@import "./bloks/feedback.scss";
 
 // body {
 //   background-color: #b77a2c;
