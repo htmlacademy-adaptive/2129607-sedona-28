@@ -1,7 +1,9 @@
+@use "../variables.scss";
+
 .page {
   height: 100%;
 }
 
 .page__body {
-  background-color: $common-color;
+  background-color: variables.$common-color;
 }

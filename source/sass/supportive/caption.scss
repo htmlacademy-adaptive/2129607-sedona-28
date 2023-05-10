@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .caption {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -5,8 +7,11 @@
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  // padding: 0;
-  // margin: 0;
+  color: variables.$dark-text;
+
+  &--contrast {
+    color: variables.$common-color;
+  }
 
   &--minor {
     text-align: left;
@@ -15,6 +20,6 @@
   &--card {
     font-size: 14px;
     line-height: 21px;
-    color: $dark-text;
+    // color: variables.$dark-text;
   }
 }

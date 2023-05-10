@@ -1,27 +1,29 @@
 //вспомогательные стили
-@import "./supportive/mixins.scss";
-@import "./supportive/variables.scss";
-@import "./supportive/mixins.scss";
-@import "./supportive/visually-hidden.scss";
-@import "./supportive/caption.scss";
-@import "./supportive/button.scss";
+@use "./variables.scss";
+@use "./supportive/fonts.scss";
+@use "./supportive/mixins.scss";
+@use "./supportive/visually-hidden.scss";
+@use "./supportive/caption.scss";
+@use "./supportive/button.scss";
 
 //стили блоков
-@import "./bloks/page.scss";
-@import "./bloks/main-header.scss";
-@import "./bloks/nav-list.scss";
-@import "./bloks/intro.scss";
-@import "./bloks/reasons.scss";
-@import "./bloks/benefit.scss";
-@import "./bloks/invite.scss";
-@import "./bloks/main-footer.scss";
-@import "./bloks/social.scss";
-@import "./bloks/copyright.scss";
-@import "./bloks/catalog.scss";
-@import "./bloks/card.scss";
-@import "./bloks/ending.scss";
-@import "./bloks/form.scss";
-@import "./bloks/feedback.scss";
+@use "./bloks/page.scss";
+@use "./bloks/main-header.scss";
+@use "./bloks/nav-list.scss";
+@use "./bloks/intro.scss";
+@use "./bloks/reasons.scss";
+@use "./bloks/benefit.scss";
+@use "./bloks/invite.scss";
+@use "./bloks/main-footer.scss";
+@use "./bloks/social.scss";
+@use "./bloks/copyright.scss";
+@use "./bloks/catalog.scss";
+@use "./bloks/card.scss";
+@use "./bloks/ending.scss";
+@use "./bloks/form.scss";
+@use "./bloks/feedback.scss";
+@use "./bloks/modal-container.scss";
+@use "./bloks/modal.scss";
 
 // body {
 //   background-color: #b77a2c;

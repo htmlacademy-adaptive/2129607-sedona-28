@@ -1,8 +1,11 @@
-.nav-list {
-  background-color: $secondary-color;
-  color: $common-color;
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
 
-  @include list-reset;
+.nav-list {
+  background-color: variables.$secondary-color;
+  color: variables.$common-color;
+
+  @include mixins.list-reset;
 }
 
 .nav-list__item {
@@ -17,6 +20,6 @@
 }
 
 .nav-list__link {
-  color: $common-color;
+  color: variables.$common-color;
   text-decoration: none;
 }

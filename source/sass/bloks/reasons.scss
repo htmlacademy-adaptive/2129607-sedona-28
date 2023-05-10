@@ -1,5 +1,8 @@
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
 .reasons__list {
-  @include list-reset;
+  @include mixins.list-reset;
   background-color: #eeeeee;
 }
 
@@ -7,8 +10,8 @@
   padding: 0;
 
   &--with-image {
-    background-color: $secondary-color;
-    color: $common-color;
+    background-color: variables.$secondary-color;
+    color: variables.$common-color;
   }
 }
 

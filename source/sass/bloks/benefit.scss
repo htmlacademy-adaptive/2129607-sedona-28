@@ -1,7 +1,10 @@
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
 .benefit {
   background-color: #ffffff;
 
-  @include list-reset;
+  @include mixins.list-reset;
 }
 
 .benefit__item {

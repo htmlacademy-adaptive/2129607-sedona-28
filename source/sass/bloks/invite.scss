@@ -1,3 +1,6 @@
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
 .invite__title {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -23,8 +26,8 @@
 }
 
 .invite__button {
-  background: $secondary-color;
-  color: $common-color;
+  background: variables.$secondary-color;
+  color: variables.$common-color;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 21px;
