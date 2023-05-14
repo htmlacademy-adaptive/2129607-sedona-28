@@ -1,0 +1,40 @@
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
+.invite__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+.invite__description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+.invite__button {
+  background: variables.$secondary-color;
+  color: variables.$common-color;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 16px 49px;
+  border: none;
+  margin-bottom: 49px;
+}

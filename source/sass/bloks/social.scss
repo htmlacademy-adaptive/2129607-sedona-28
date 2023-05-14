@@ -1,0 +1,6 @@
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
+.social {
+  @include mixins.list-reset;
+}

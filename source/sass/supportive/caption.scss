@@ -1,0 +1,25 @@
+@use "../variables.scss";
+
+.caption {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$dark-text;
+
+  &--contrast {
+    color: variables.$common-color;
+  }
+
+  &--minor {
+    text-align: left;
+  }
+
+  &--card {
+    font-size: 14px;
+    line-height: 21px;
+    // color: variables.$dark-text;
+  }
+}

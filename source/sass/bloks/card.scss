@@ -1,0 +1,6 @@
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
+.card {
+  color: variables.$light-text;
+}

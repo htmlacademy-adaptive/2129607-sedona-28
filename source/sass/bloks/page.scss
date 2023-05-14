@@ -1,0 +1,16 @@
+@use "../variables.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$light-text;
+  background-color: variables.$common-color;
+}

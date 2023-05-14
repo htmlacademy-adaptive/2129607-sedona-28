@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="'page" lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
@@ -23,29 +23,117 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">Фото и видео</a>
+            </li>
             <li class="nav-list__item nav-list__item--current">
-              <a>Главная</a>
+              <a class="nav-list__link">Форма Отзыва</a>
             </li>
             <li class="nav-list__item">
-              <a href="#">Фото и видео</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#">Форма Отзыва</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#">HTML ACADEMY</a>
+              <a class="nav-list__link" href="#">HTML ACADEMY</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main></main>
+    <main class="main-container">
+      <h1 class="visually-hidden">Форма отзывов</h1>
+      <section class="intro">
+        <div class="intro__wrapper">
+          <img src="./img/back-mobile.jpg.jpg" width="320" height="389" alt="Горный вид">
+          <h2 class="intro__title caption">Оставьте свой отзыв</h2>
+          <p class="intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+      </section>
+
+      <section class="form">
+        <h2 class="visually-hidden">Введите данные</h2>
+        <form class="form__feedback feedback" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="feadback__guest">
+            <h3 class="feedback__title caption">Представьтесь:</h3>
+            <label>
+              Имя*:
+              <input type="text" name="guest-name" value="Петр" required>
+            </label>
+            <label>
+              Фамилия*:
+              <input type="text" name="guest-surname" value="Пустота" required>
+            </label>
+            <label>
+              Отчество:
+              <input type="text" name="guest-patronymic" value="Викторович">
+            </label>
+          </fieldset>
+
+          <fieldset class="feedback__contact-info">
+            <h3 class="feedback__title caption">Контактная информация:</h3>
+            <label>
+              Контактный телефон*:
+              <input type="tel" name="contact-tel" placeholder="Введите телефон" required>
+            </label>
+            <label>
+              Электронная почта*:
+              <input type="email" name="contact-email" placeholder="Введите e-mail" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="feedback__impress">
+            <h3 class="feedback__title caption">Ваше общее впечатление:</h3>
+            <label>
+              <input type="radio" name="impress" value="good" checked>
+              Скорее положительное
+            </label>
+            <label>
+              <input type="radio" name="impress" value="bad">
+              Скорее отрицательное
+            </label>
+            <label>
+              <input type="radio" name="impress" value="neutral">
+              Затрудняюсь ответить
+            </label>
+          </fieldset>
+
+          <fieldset class="feedback__attractions">
+            <h3 class="feedback__title caption">посещенные достопримечательности:</h3>
+            <label>
+              <input type="checkbox" name="bridge" checked>
+              Мост Дьявола
+            </label>
+            <label>
+              <input type="checkbox" name="mountain" checked>
+              Гора-Колокол
+            </label>
+            <label>
+              <input type="checkbox" name="park" checked>
+              Слайд-парк
+            </label>
+            <label>
+              <input type="checkbox" name="rocks">
+              Красные скалы
+            </label>
+          </fieldset>
+
+          <fieldset class="feedback__attractions">
+            <h3 class="feedback__title caption">Опишите свои эмоции:</h3>
+            <label>
+              <textarea name="feedback-message" rows="6">Опишите подробно все свои восторги</textarea>
+            </label>
+          </fieldset>
+
+          <button class="form__button" type="submit">Отправить отзыв</button>
+          <p class="form__note">* — обязательные поля</p>
+        </form>
+      </section>
+    </main>
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <p class="main-footer__hashtag">#visitSEDONA</p>
-        <ul class="main-footer__social social__list">
+        <ul class="main-footer__social social">
           <li class="social__item social__item--vk"><a href="#">ВКонтакте</a></li>
           <li class="social__item social__item--tg"><a href="#">Telegram</a></li>
           <li class="social__item social__item--yt"><a href="#">YouTube</a></li>
@@ -59,6 +147,28 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container--close">
+      <div class="modal modal--error">
+        <section class="modal__content">
+          <h2 class="modal__title caption">Что-то пошло не так!</h2>
+          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="modal__button button">Ок</button>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal-container modal-container--close">
+      <div class="modal modal--success">
+        <section class="modal__content">
+          <h2 class="modal__title caption">Ваш отзыв отправлен!</h2>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          <div class="modal__inner-wrap">
+            <button class="modal__button button">Закрыть окно</button>
+          </div>
+        </section>
+      </div>
+    </div>
 
   </body>
 </html>
