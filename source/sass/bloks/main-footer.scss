@@ -1,3 +1,18 @@
+@use "../variables.scss";
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .main-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .main-footer__hashtag {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;

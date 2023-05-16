@@ -2,8 +2,7 @@
 @use "../supportive/mixins.scss";
 
 .nav-list {
-  background-color: variables.$secondary-color;
-  color: variables.$common-color;
+
 
   @include mixins.list-reset;
 }
@@ -17,9 +16,35 @@
   text-transform: uppercase;
   padding-top: 17px;
   padding-bottom: 12px;
+  background-color: variables.$secondary-color;
+  color: variables.$common-color;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .nav-list__item {
+    background-color: transparent;
+  }
+
+  .nav-list__item:nth-child(2) {
+    margin-left: 7%;
+  }
+
+  .nav-list__item:nth-child(3) {
+    margin-left: 19%;
+  }
 }
 
 .nav-list__link {
-  color: variables.$common-color;
   text-decoration: none;
+  color: variables.$common-color;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .nav-list__link {
+    color: variables.$dark-text;
+  }
+
+  .nav-list__link--current {
+    color: #766357;
+  }
 }

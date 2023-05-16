@@ -4,6 +4,15 @@
 .reasons__list {
   @include mixins.list-reset;
   background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .reasons__list {
+    flex-direction: row;
+  }
 }
 
 .reasons__item {
@@ -14,6 +23,19 @@
     color: variables.$common-color;
   }
 }
+
+@media (min-width: variables.$tablet-width) {
+
+  .reasons__item {
+    width: 33%;
+  }
+
+  .reasons__item--with-image {
+    min-width: 100%;
+    // min-width: variables.$tablet-width;
+  }
+}
+
 
 .reasons__title {
   margin-top: 24px;

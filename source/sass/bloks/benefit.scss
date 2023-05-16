@@ -3,8 +3,17 @@
 
 .benefit {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 
   @include mixins.list-reset;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .benefit {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .benefit__item {

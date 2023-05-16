@@ -22,9 +22,11 @@
             </svg>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item nav-list__item--current">
-              <a class="nav-list__link">Главная</a>
+          <!-- main-nav__list--no-js - класс для меню при нерабочем JS
+          main-nav__list--close - закрытое меню -->
+          <ul class="main-nav__list main-nav__list--close nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link nav-list__link--current">Главная</a>
             </li>
             <li class="nav-list__item">
               <a class="nav-list__link" href="catalog.html">Фото и видео</a>

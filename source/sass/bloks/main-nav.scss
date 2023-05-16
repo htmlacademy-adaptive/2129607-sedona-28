@@ -1,0 +1,35 @@
+@use "../variables.scss";
+
+.main-nav__toggle {
+  position: fixed;
+  right: 10px;
+  border: none;
+}
+
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &--no-js {
+    margin-top: 96px;
+  }
+}
+
+@media (max-width: variables.$tablet-width) {
+  .main-nav__list--close{
+    display: none;
+  }
+}
+
+@media (min-width: variables.$tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
