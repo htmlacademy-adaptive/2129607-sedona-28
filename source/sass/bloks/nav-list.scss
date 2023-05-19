@@ -2,8 +2,6 @@
 @use "../supportive/mixins.scss";
 
 .nav-list {
-
-
   @include mixins.list-reset;
 }
 

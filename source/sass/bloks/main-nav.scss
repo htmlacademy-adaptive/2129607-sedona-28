@@ -1,9 +1,11 @@
 @use "../variables.scss";
 
 .main-nav__toggle {
-  position: fixed;
-  right: 10px;
+  position: absolute;
+  right: 0;
+  top: 5px;
   border: none;
+  background-color: transparent;
 }
 
 
@@ -18,7 +20,7 @@
 }
 
 @media (max-width: variables.$tablet-width) {
-  .main-nav__list--close{
+  .main-nav__list--close {
     display: none;
   }
 }
