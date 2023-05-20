@@ -6,14 +6,9 @@
 }
 
 .nav-list__item {
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 17px;
-  padding-bottom: 12px;
   background-color: variables.$secondary-color;
   color: variables.$common-color;
 }
@@ -21,6 +16,10 @@
 @media (min-width: variables.$tablet-width) {
   .nav-list__item {
     background-color: transparent;
+    font-size: 14px;
+    line-height: 21px;
+    min-width: 153px;
+    padding: 18px 0;
   }
 
   .nav-list__item:nth-child(2) {

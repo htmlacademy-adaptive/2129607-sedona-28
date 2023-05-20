@@ -2,8 +2,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  right: 0;
-  top: 5px;
+  right: 14px;
+  top: 16px;
   border: none;
   background-color: transparent;
 }
@@ -32,6 +32,6 @@
 
   .main-nav__list {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }

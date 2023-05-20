@@ -7,16 +7,15 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
 
-@media (min-width: variables.$tablet-width) {
-  .reasons__list {
+  @media (min-width: variables.$tablet-width) {
     flex-direction: row;
   }
 }
 
 .reasons__item {
-  padding: 0;
+  position: relative;
+  padding: 0 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,14 +24,27 @@
     background-color: variables.$secondary-color;
     color: variables.$common-color;
   }
+
+  &:first-child::before {
+    position: absolute;
+    background-image: url("../../img/white-triangle.svg");
+    background-position: top center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    height: 38px;
+    width: 768px;
+    max-width: 100%;
+    content: "";
+  }
 }
 
-@media (min-width: variables.$tablet-width) {
-  .reasons__item {
-    width: 33%;
-  }
+.reasons__item--with-image {
+  padding: 0;
 
-  .reasons__item--with-image {
+  @media (min-width: variables.$tablet-width) {
     min-width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -45,12 +57,23 @@
 
 .reasons__image {
   display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .reasons__img-container {
+    min-width: 66%;
+  }
 }
 
 .reasons__container {
-  min-width: 284px; //на мобилке ограничивает контейнер для границы снизу
+  position: relative;
+  min-width: 284px;
   max-width: 100%;
   border-bottom: solid 1px #d6d6d6;
+  box-sizing: border-box;
 
   @media (min-width: variables.$tablet-width) {
     border: none;
@@ -63,14 +86,36 @@
   }
 }
 
+.reasons__item--with-image .reasons__container {
+  margin-top: 15px;
+}
+
+.reasons__item--with-image:first-child .reasons__container {
+  margin-top: 48px;
+}
+
 .reasons__item--with-image .reasons__container,
-.reasons__item:last-child .reasons__container{
+.reasons__item:last-child .reasons__container {
   border: none;
 }
 
 .reasons__title {
   margin-top: 24px;
   margin-bottom: 11px;
+}
+
+.reasons__container:first-child {
+  & .reasons__title {
+    margin-top: 22px;
+  }
+
+  & .reasons__subtitle {
+    margin-bottom: 17px;
+  }
+
+  // & .reasons__description {
+  //   margin-bottom: 39px;
+  // }
 }
 
 .reasons__subtitle,
@@ -81,9 +126,21 @@
 }
 
 .reasons__description {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
+}
+
+.reasons__item:last-child .reasons__description {
+  margin-bottom: 28px;
+}
+
+.reasons__item--with-image .reasons__description {
+  margin-bottom: 38px;
 }
 
 .reasons__subtitle {
-  margin-bottom: 17px;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
 }
