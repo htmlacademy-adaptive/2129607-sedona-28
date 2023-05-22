@@ -3,6 +3,16 @@
 
 .invite__container {
   margin: 40px 18px 48px;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 60px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .invite__title {
@@ -10,6 +20,11 @@
   padding: 0;
   margin: 0;
   margin-bottom: 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
 }
 
 .invite__description {
@@ -17,22 +32,36 @@
   margin: 0;
   text-align: center;
   margin-bottom: 33px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 435px;
+    margin: 0 auto 45px;
+  }
 }
 
 .invite__button {
-  background: variables.$secondary-color;
-  color: variables.$common-color;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
   padding: 16px 49px;
   border: none;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 458px;
+  }
+}
+
+.invite__map-wrap {
+  position: relative;
 }
 
 .invite__map {
   display: block;
-  margin-bottom: 19px;
+  margin: 0 auto 19px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.invite__marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

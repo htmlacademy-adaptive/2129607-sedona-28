@@ -12,19 +12,11 @@
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="./img/logo.svg" width="185" height="96" alt="Городок Седона">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <nav class="main-nav main-nav--open">
+        <button class="main-nav__toggle main-nav__toggle--close" type="button">
           <span class="visually-hidden">Открыть меню</span>
-          <svg aria-hidden="true" width="23" height="22" fill="#81b3d2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.9 0H0V4H22.9V0Z"/>
-            <path d="M22.9 9H0V13H22.9V9Z"/>
-            <path d="M22.9 18H0V22H22.9V18Z"/>
-            </svg>
         </button>
-        <div class="main-nav__wrapper">
-          <!-- main-nav__list--no-js - класс для меню при нерабочем JS
-          main-nav__list--close - закрытое меню -->
-          <ul class="main-nav__list main-nav__list--close nav-list">
+          <ul class="main-nav__list nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link nav-list__link--current">Главная</a>
             </li>
@@ -38,7 +30,6 @@
               <a class="nav-list__link" href="#">HTML ACADEMY</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
 
@@ -46,7 +37,7 @@
       <h1 class="visually-hidden">Седона - туристический городок</h1>
       <section class="intro">
         <div class="intro__wrapper">
-          <img src="./img/text-index.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona">
+          <img class="intro__image" src="./img/text-index.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona">
         </div>
         <h2 class="intro__title caption">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="intro__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
@@ -71,16 +62,22 @@
               </div>
               <ul class="reasons__benefit benefit">
                 <li class="benefit__item benefit__item--house">
-                  <h3 class="benefit__title caption caption--minor">Жилье</h3>
-                  <p class="benefit__description">Рекомендуем пожить в <br>настоящем мотеле, все как в <br>кино!</p>
+                  <div class="benefit__container">
+                    <h3 class="benefit__title caption caption--minor">Жилье</h3>
+                    <p class="benefit__description">Рекомендуем пожить в <br>настоящем мотеле, все как в <br>кино!</p>
+                  </div>
                 </li>
                 <li class="benefit__item benefit__item--meal">
-                  <h3 class="benefit__title caption caption--minor">Еда</h3>
-                  <p class="benefit__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                  <div class="benefit__container">
+                    <h3 class="benefit__title caption caption--minor">Еда</h3>
+                    <p class="benefit__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                  </div>
                 </li>
                 <li class="benefit__item benefit__item--souvenir">
-                  <h3 class="benefit__title caption caption--minor">Сувениры</h3>
-                  <p class="benefit__description">Не только китайского, но и местного производства!</p>
+                  <div class="benefit__container">
+                    <h3 class="benefit__title caption caption--minor">Сувениры</h3>
+                    <p class="benefit__description">Не только китайского, но и местного производства!</p>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -127,9 +124,19 @@
         <div class="invite__container">
           <h2 class="invite__title caption">Заинтересовались?</h2>
           <p class="invite__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="invite__button">Найти гостиницу</button>
+          <button class="invite__button button">Найти гостиницу</button>
         </div>
-        <img class="invite__map" src="./img/map-mobile.jpg.jpg">
+        <div class="invite__map-wrap">
+          <svg class="invite__marker" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 27C20.9558 27 27 20.9558 27 13.5C27 6.04416 20.9558 0 13.5 0C6.04416 0 0 6.04416 0 13.5C0 20.9558 6.04416 27 13.5 27Z" fill="white"/>
+            <path d="M13.5 21.8996C18.1392 21.8996 21.9 18.1388 21.9 13.4996C21.9 8.86042 18.1392 5.09961 13.5 5.09961C8.86078 5.09961 5.09998 8.86042 5.09998 13.4996C5.09998 18.1388 8.86078 21.8996 13.5 21.8996Z" fill="#81B3D3"/>
+          </svg>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/map-desktop.jpg 1x, ./img/map-desktop@2x.jpg 2x" width="1200" height="350">
+            <source media="(min-width: 768px)" srcset="./img/map-tablet.jpg 1x, ./img/map-tablet@2x.jpg 2x" width="768" height="350">
+            <img class="invite__map" src="./img/map-mobile.jpg" srcset="./img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Где мы находимся">
+          </picture>
+        </div>
       </section>
     </main>
 
@@ -153,14 +160,14 @@
             </a>
           </li>
         </ul>
-        <div class="main-footer__copyright copyright">
+        <p class="main-footer__copyright copyright">
           <a class="copyright__link" href="#">
             <span class="copyright__text">Разработано</span>
             <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.65 0.449951H14.55L1.05 1.84995V26.55L14.55 34.5499L27.95 26.55V1.84995L14.65 0.449951ZM26.05 12.55L14.55 5.74995V5.64995H14.45L14.35 5.54995V5.64995L2.95 12.55V3.54995L14.45 2.34995L26.05 3.54995V12.55ZM14.45 7.24995L25.95 13.95L21.45 16.55L14.35 12.35V13.75L20.25 17.25L19.35 17.75L14.35 14.75V16.15L18.15 18.45L17.35 18.95L14.35 17.15V18.55L16.25 19.65L14.45 20.75L3.05 14.05L14.45 7.24995ZM2.95 15.55L14.35 22.35V23.35L6.45 18.65V20.05L14.45 24.85V25.95L6.45 21.25V22.65L14.45 27.45L22.55 22.55V17.35L25.95 15.35V25.35L14.45 32.25L2.95 25.45V15.55Z" fill="black"/>
             </svg>
           </a>
-        </div>
+        </p>
       </div>
     </footer>
 

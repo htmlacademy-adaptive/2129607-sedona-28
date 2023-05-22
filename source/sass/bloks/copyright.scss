@@ -1,13 +1,27 @@
 @use "../variables.scss";
 
 .copyright {
-  margin-top: 16px;
-  margin-bottom: 33px;
+  margin-top: 26px;
+  margin-bottom: 16px;
+  margin-left: 1px;
+  width: 130px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 3px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 27px;
+    margin-right: -13px;
+  }
 }
 
 .copyright__link {
   color: variables.$dark-text;
   text-decoration: none;
+
 }
 
 .copyright__icon {

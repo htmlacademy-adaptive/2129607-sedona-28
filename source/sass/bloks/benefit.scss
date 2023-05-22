@@ -2,26 +2,95 @@
 @use "../supportive/mixins.scss";
 
 .benefit {
+  @include mixins.list-reset;
   background-color: variables.$common-color;
   display: flex;
   flex-direction: column;
+  padding: 23px 0 45px 18px;
 
-  @include mixins.list-reset;
-}
-
-@media (min-width: variables.$tablet-width) {
-  .benefit {
+  @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 49px;
   }
 }
 
 .benefit__item {
-  padding-left: 65px;
-  margin-top: 32px;
+  display: block;
+  padding-left: 47px;
+  padding-top: 8px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin-bottom: 25px;
+  //background-size: 14%;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 33%;
+    padding: 150px 0 0;
+    margin: 0 auto;
+  }
 
   &:last-child {
-    margin-bottom: 45px;
+    margin-bottom: 0;
+  }
+
+  &--house {
+    background-image: url("../../img/house.svg");
+    background-size: 39px 42px;
+
+    @media (min-width: variables.$tablet-width) {
+      background-position: top 57px center;
+      background-size: auto 78px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-position: top 66px center;
+      //background-size: auto 78px;
+    }
+  }
+
+  &--meal {
+    background-image: url("../../img/burger.svg");
+    background-size: 40px 40px;
+
+    @media (min-width: variables.$tablet-width) {
+      background-position: top 55px center;
+      background-size: auto 80px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-position: top 66px center;
+      //background-size: auto 78px;
+    }
+  }
+
+  &--souvenir {
+    background-image: url("../../img/gift.svg");
+    background-size: 40px 39px;
+
+    @media (min-width: variables.$tablet-width) {
+      background-position: top 63px center;
+      background-size: auto 77px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-position: top 68px center;
+      background-size: 68px;
+    }
+  }
+}
+
+.benefit__container {
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 190px;
   }
 }
 
@@ -29,10 +98,26 @@
   padding: 0;
   margin: 0;
   margin-bottom: 17px;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+    font-size: 21px;
+    margin-top: 7px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 19px;
+    margin-bottom: 22px;
+  }
 }
 
 .benefit__description {
   color: variables.$light-text;
   padding: 0;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+  }
 }

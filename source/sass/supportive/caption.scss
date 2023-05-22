@@ -22,6 +22,9 @@
     font-size: 14px;
     line-height: 21px;
     text-align: left;
-    // color: variables.$dark-text;
+
+    @media (min-width: variables.$desktop-width) {
+      color: variables.$common-color;
+    }
   }
 }
