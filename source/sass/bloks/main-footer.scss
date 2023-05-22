@@ -1,17 +1,46 @@
+@use "../variables.scss";
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 17px;
+  //background-color: rgb(120, 120, 236);
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .main-footer__hashtag {
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  text-transform: uppercase;
   color: #000000;
+  margin-bottom: 29px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 25px;
+    margin-left: 5px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 29px;
+    margin-left: -12px;
+  }
 }
 
 .main-footer__social {
   text-align: center;
+
 }
 
 .main-footer__copyright {
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 5px;
+  }
 }

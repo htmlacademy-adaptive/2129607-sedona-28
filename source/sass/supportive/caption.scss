@@ -15,11 +15,16 @@
 
   &--minor {
     text-align: left;
+    color: variables.$dark-text;
   }
 
   &--card {
     font-size: 14px;
     line-height: 21px;
-    // color: variables.$dark-text;
+    text-align: left;
+
+    @media (min-width: variables.$desktop-width) {
+      color: variables.$common-color;
+    }
   }
 }

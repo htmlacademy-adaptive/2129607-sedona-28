@@ -1,15 +1,147 @@
+@use "../variables.scss";
+
+.intro {
+  margin-top: 56px;
+  width: 100%;
+}
+
+.intro__wrapper {
+  position: relative;
+  background-color: #cae5f6;
+  background-image: url("../../img/intro-bg-mobile.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 389px;
+  width: 100%;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    background-image: url("../../img/intro-triangle.svg");
+    background-position: bottom -1px center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    height: 57px;
+    width: 1201px;
+    max-width: 100%;
+    content: "";
+
+    @media (min-width: variables.$tablet-width) {
+      background-position: bottom -1px center;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: url("../../img/intro-bg-desktop.jpg");
+    height: 518px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/intro-bg-mobile@2x.jpg");
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/intro-bg-desktop.jpg");
+    }
+  }
+}
+
+.intro__image {
+  display: inline-block;
+  margin-top: 90px;
+  width: 100%;
+  max-width: 282px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 100%;
+    max-width: 461px;
+    max-height: 350px;
+    margin-top: 78px;
+  }
+}
+
+.intro--inner .intro__wrapper {
+  background-position: bottom center;
+  height: 158px;
+  background-size: auto;
+  margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 289px;
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 300px;
+    margin-bottom: 100px;
+  }
+}
+
+.intro--inner .intro__image {
+  margin-top: 52px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 457px;
+    margin-top: -11px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 460px;
+    max-height: 80px;
+    margin-top: 100px;
+    margin-left: -6px;
+  }
+}
+
 .intro__title {
   color: #000000;
+  margin: 0 auto;
+  margin-top: 34px;
 
-  // @include common-title;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    max-width: 520px;
+    margin-top: 48px;
+  }
+  @media (min-width: variables.$desktop-width) {
+    max-width: 480px;
+    margin-top: 60px;
+  }
+}
+
+.intro--inner .intro__title {
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .intro__description {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
   text-align: center;
-  text-transform: uppercase;
-  color: #333333;
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 17px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 29px;
+    margin-bottom: 44px;
+  }
+}
+
+.intro--inner .intro__description {
+  margin: 24px auto 37px;
+  max-width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 440px;
+    margin-top: 30px;
+    margin-bottom: 56px;
+  }
 }

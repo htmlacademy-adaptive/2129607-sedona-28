@@ -1,8 +1,72 @@
-.catalog {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
+@use "../variables.scss";
+@use "../supportive/mixins.scss";
+
+
+.catalog__wrapper {
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 81px;
+    padding: 0 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 91px;
+    padding: 0;
+  }
+}
+
+.catalog__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include mixins.list-reset;
+}
+
+.catalog__item {
+  position: relative;
+  width: 100%;
+
+  @media (max-width: variables.$tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+}
+
+@media (min-width: variables.$tablet-width) {
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog__item--first {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .catalog__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalog__item--first {
+    grid-column: 1 / 4;
+  }
 }

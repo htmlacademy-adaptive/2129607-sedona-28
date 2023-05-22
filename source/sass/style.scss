@@ -19,12 +19,9 @@
 @use "./bloks/copyright.scss";
 @use "./bloks/catalog.scss";
 @use "./bloks/card.scss";
-@use "./bloks/ending.scss";
+@use "./bloks/presentation.scss";
 @use "./bloks/form.scss";
 @use "./bloks/feedback.scss";
 @use "./bloks/modal-container.scss";
 @use "./bloks/modal.scss";
-
-// body {
-//   background-color: #b77a2c;
-// }
+@use "./bloks/main-nav.scss";

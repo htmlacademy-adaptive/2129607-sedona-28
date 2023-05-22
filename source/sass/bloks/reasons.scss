@@ -4,40 +4,195 @@
 .reasons__list {
   @include mixins.list-reset;
   background-color: #eeeeee;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-.reasons__item {
-  padding: 0;
-
-  &--with-image {
-    background-color: variables.$secondary-color;
-    color: variables.$common-color;
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
   }
 }
 
+.reasons__item {
+  position: relative;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 33%;
+    padding: 0;
+    padding-bottom: 37px;
+    margin: 0 auto;
+
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 400px;
+    padding-bottom: 26px;
+
+  }
+
+  &--with-image {
+    padding: 0;
+    background-color: variables.$secondary-color;
+    color: variables.$common-color;
+
+    @media (min-width: variables.$tablet-width) {
+      min-width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  @media (max-width: variables.$tablet-width) {
+    &:first-child::before {
+      position: absolute;
+      background-image: url("../../img/white-triangle.svg");
+      background-position: top -1px center;
+      background-size: auto;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      height: 38px;
+      width: 768px;
+      max-width: 100%;
+      content: "";
+    }
+  }
+}
+
+.reasons__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .reasons__img-container {
+    min-width: 66%;
+  }
+}
+
+.reasons__container {
+  position: relative;
+  min-width: 284px;
+  max-width: 100%;
+
+  @media (max-width: variables.$tablet-width) {
+    border-bottom: solid 1px #d6d6d6;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+    min-width: 256px;
+    max-width: 100%;
+    padding: 0 33px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: variables.$tablet-width) {
+  .reasons__item--with-image .reasons__container {
+    margin-top: 15px;
+  }
+
+  .reasons__item--with-image:first-child .reasons__container {
+    margin-top: 48px;
+  }
+}
+
+.reasons__item--with-image .reasons__container,
+.reasons__item:last-child .reasons__container {
+  border: none;
+}
+
 .reasons__title {
-  margin-top: 24px;
+  margin-top: 22px;
   margin-bottom: 11px;
 
-  // @include common-title;
+  @media (min-width: variables.$tablet-width) {
+    max-width: 150px;
+    margin: 42px auto 13px;
+    font-size: 21px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 53px;
+    margin-bottom: 14px;
+  }
 }
 
 .reasons__subtitle,
 .reasons__description {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
   text-align: center;
-  text-transform: uppercase;
   padding: 0;
   margin: 0;
 }
 
 .reasons__description {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .reasons__subtitle {
+  font-size: 14px;
+  line-height: 21px;
   margin-bottom: 17px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.reasons__item--with-image .reasons__container {
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 33%;
+  }
+}
+
+.reasons__item--with-image .reasons__description {
+  margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 25px;
+    max-width: 190px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 300px;
+  }
+}
+
+.reasons__item--with-image .reasons__title {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+.reasons__item:last-child .reasons__description {
+  margin-bottom: 28px;
 }
