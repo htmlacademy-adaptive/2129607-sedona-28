@@ -169,6 +169,7 @@
 .reasons__item--with-image .reasons__container {
   @media (min-width: variables.$tablet-width) {
     max-width: 33%;
+    margin: 0 auto;
   }
 }
 
