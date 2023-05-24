@@ -85,7 +85,8 @@
 
   @media (min-width: variables.$tablet-width) {
     max-width: 457px;
-    margin-top: -11px;
+    max-height: 76px;
+    margin-top: 97px;
   }
 
   @media (min-width: variables.$desktop-width) {
