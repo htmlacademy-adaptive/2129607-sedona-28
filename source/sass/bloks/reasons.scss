@@ -25,13 +25,11 @@
     padding: 0;
     padding-bottom: 37px;
     margin: 0 auto;
-
   }
 
   @media (min-width: variables.$desktop-width) {
     max-width: 400px;
     padding-bottom: 26px;
-
   }
 
   &--with-image {
@@ -76,8 +74,10 @@
   object-position: center;
 }
 
-@media (min-width: variables.$tablet-width) {
-  .reasons__img-container {
+.reasons__img-container {
+  min-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
     min-width: 66%;
   }
 }
@@ -167,7 +167,6 @@
 }
 
 .reasons__item--with-image .reasons__container {
-
   @media (min-width: variables.$tablet-width) {
     max-width: 33%;
   }

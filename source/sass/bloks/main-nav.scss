@@ -7,13 +7,12 @@
   width: 100%;
 
   &--open .main-nav__toggle {
-    background-image: url("../../img/icon-cross.svg");
+    background-image: url("../img/icon-cross.svg");
     right: 20px;
-
   }
 
   &--closed .main-nav__toggle {
-    background-image: url("../../img/icon-menu.svg");
+    background-image: url("../img/icon-menu.svg");
   }
 
   &--closed .main-nav__list {

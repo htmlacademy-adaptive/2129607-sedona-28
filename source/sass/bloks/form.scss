@@ -1,16 +1,29 @@
 @use "../variables.scss";
 @use "../supportive/mixins.scss";
 
-.form__button {
-  background: variables.$secondary-color;
-  color: variables.$common-color;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 16px 49px;
-  border: none;
-  margin-bottom: 49px;
+.form {
+  margin-top: 27px;
+  margin-bottom: 35px;
+  max-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 83px;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 40px;
+  }
+}
+
+.form__wrapper {
+  max-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 120px;
+  }
 }

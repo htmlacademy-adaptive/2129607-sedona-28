@@ -21,6 +21,16 @@
 .copyright__link {
   color: variables.$dark-text;
   text-decoration: none;
+
+  &:hover {
+    color: variables.$secondary-color;
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .copyright__icon {
