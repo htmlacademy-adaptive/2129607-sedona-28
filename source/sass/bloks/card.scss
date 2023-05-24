@@ -22,7 +22,7 @@
   }
 }
 
-@media (min-width: variables.$tablet-width){
+@media (min-width: variables.$tablet-width) {
   .card:not(:first-child):nth-child(2n-1) .card__wrap {
     background-color: #eaeaea;
   }
@@ -105,11 +105,10 @@
 }
 
 .card__number {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   margin-left: 9px;
   vertical-align: bottom;
-
 }

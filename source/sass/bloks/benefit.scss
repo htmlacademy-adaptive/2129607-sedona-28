@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   padding: 23px 0 45px 18px;
+  box-sizing: border-box;
+  width: 100%;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
@@ -41,7 +43,7 @@
   }
 
   &--house {
-    background-image: url("../../img/house.svg");
+    background-image: url("../img/house.svg");
     background-size: 39px 42px;
 
     @media (min-width: variables.$tablet-width) {
@@ -56,7 +58,7 @@
   }
 
   &--meal {
-    background-image: url("../../img/burger.svg");
+    background-image: url("../img/burger.svg");
     background-size: 40px 40px;
 
     @media (min-width: variables.$tablet-width) {
@@ -71,7 +73,7 @@
   }
 
   &--souvenir {
-    background-image: url("../../img/gift.svg");
+    background-image: url("../img/gift.svg");
     background-size: 40px 39px;
 
     @media (min-width: variables.$tablet-width) {

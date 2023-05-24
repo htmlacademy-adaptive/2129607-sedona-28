@@ -40,15 +40,15 @@
     padding: 0;
     margin-top: 15px;
 
-      &:first-child::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 1px;
-        height: 100%;
-        background-color: #e5e5e5;
-      }
+    &:first-child::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #e5e5e5;
+    }
 
     &--attractions {
       margin-bottom: 5px;
@@ -114,7 +114,6 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-
     & .feedback__title {
       width: 400px;
       margin: 22px auto 30px;
@@ -224,7 +223,7 @@
   background-color: #f2f2f2;
 
   @media (min-width: variables.$tablet-width) {
-   .feedback__group--guest &:last-child {
+    .feedback__group--guest &:last-child {
       margin-bottom: -1px;
     }
   }
@@ -243,14 +242,14 @@
 
   .feedback__group--contact-info &::after {
     content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 58px;
-      height: 58px;
-      background-color: #e6e6e6;
-      background-repeat: no-repeat;
-      background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--tel::after {
@@ -383,7 +382,7 @@
 }
 
 .feedback__message {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
