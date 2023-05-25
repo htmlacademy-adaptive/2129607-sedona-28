@@ -11,11 +11,12 @@
   <body class="page__body">
 
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img class="main-header__logo-image" src="./img/logo.svg" width="185" height="96" alt="Городок Седона">
       </a>
-      <nav class="main-nav main-nav--open">
-        <button class="main-nav__toggle main-nav__toggle--close" type="button">
+      <!-- Класс main-nav--closed для закрытия меню, main-nav--nojs для отключенного JS -->
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
           <ul class="main-nav__list nav-list">
@@ -51,11 +52,16 @@
           <ul class="catalog__list">
             <li class="catalog__item catalog__item--first card">
               <div class="card__wrap">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/photo-1-desktop.jpg 1x, ./img/photo-1-desktop@2x.jpg 2x" width="1200" height="400">
-                  <source media="(min-width: 768px)" srcset="./img/photo-1-tablet.jpg 1x, ./img/photo-1-tablet@2x.jpg 2x" width="648" height="400">
-                  <img class="card__img" src="./img/photo-1-mobile.jpg" srcset="./img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Панорама">
-                </picture>
+                <a class="card__img-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-1-desktop.webp 1x, ./img/photo-1-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/photo-1-mobile.webp 1x, ./photo-1-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="./img/photo-1-desktop.jpg 1x, ./img/photo-1-desktop@2x.jpg 2x" width="1200" height="400">
+                    <source media="(min-width: 768px)" srcset="./img/photo-1-tablet.jpg 1x, ./img/photo-1-tablet@2x.jpg 2x" width="648" height="400">
+                    <img class="card__img" src="./img/photo-1-mobile.jpg" srcset="./img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Панорама">
+                  </picture>
+                </a>
                 <div class="card__container">
                   <div class="card__text-wrap">
                     <h3 class="card__title caption caption--card">неродные просторы</h3>
@@ -72,11 +78,16 @@
             </li>
             <li class="catalog__item card">
               <div class="card__wrap">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/photo-2-desktop.jpg 1x, ./img/photo-2-desktop@2x.jpg 2x" width="400" height="267">
-                  <source media="(min-width: 768px)" srcset="./img/photo-2-tablet.jpg 1x, ./img/photo-2-tablet@2x.jpg 2x" width="324" height="267">
-                  <img class="card__img" src="./img/photo-2-mobile.jpg" srcset="./img/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактусы">
-                </picture>
+                <a class="card__img-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-2-desktop.webp 1x, ./img/photo-2-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/photo-2-mobile.webp 1x, ./photo-2-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="./img/photo-2-desktop.jpg 1x, ./img/photo-2-desktop@2x.jpg 2x" width="400" height="267">
+                    <source media="(min-width: 768px)" srcset="./img/photo-2-tablet.jpg 1x, ./img/photo-2-tablet@2x.jpg 2x" width="324" height="267">
+                    <img class="card__img" src="./img/photo-2-mobile.jpg" srcset="./img/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактусы">
+                  </picture>
+                </a>
                 <div class="card__container">
                   <div class="card__text-wrap">
                     <h3 class="card__title caption caption--card">Местная растительность</h3>
@@ -93,11 +104,16 @@
             </li>
             <li class="catalog__item card">
               <div class="card__wrap">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/photo-3-desktop.jpg 1x, ./img/photo-3-desktop@2x.jpg 2x" width="400" height="267">
-                  <source media="(min-width: 768px)" srcset="./img/photo-3-tablet.jpg 1x, ./img/photo-3-tablet@2x.jpg 2x" width="324" height="267">
-                  <img class="card__img" src="./img/photo-3-mobile.jpg" srcset="./img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога">
-                </picture>
+                <a class="card__img-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-3-desktop.webp 1x, ./img/photo-3-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/photo-3-mobile.webp 1x, ./photo-3-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="./img/photo-3-desktop.jpg 1x, ./img/photo-3-desktop@2x.jpg 2x" width="400" height="267">
+                    <source media="(min-width: 768px)" srcset="./img/photo-3-tablet.jpg 1x, ./img/photo-3-tablet@2x.jpg 2x" width="324" height="267">
+                    <img class="card__img" src="./img/photo-3-mobile.jpg" srcset="./img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога">
+                  </picture>
+                </a>
                 <div class="card__container">
                   <div class="card__text-wrap">
                     <h3 class="card__title caption caption--card">Дорога на север</h3>
@@ -114,11 +130,16 @@
             </li>
             <li class="catalog__item card">
               <div class="card__wrap">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/photo-4-desktop.jpg 1x, ./img/photo-4-desktop@2x.jpg 2x" width="400" height="267">
-                  <source media="(min-width: 768px)" srcset="./img/photo-4-tablet.jpg 1x, ./img/photo-4-tablet@2x.jpg 2x" width="324" height="267">
-                  <img class="card__img" src="./img/photo-4-mobile.jpg" srcset="./img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Каньон">
-                </picture>
+                <a class="card__img-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-4-desktop.webp 1x, ./img/photo-4-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/photo-4-mobile.webp 1x, ./photo-4-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="./img/photo-4-desktop.jpg 1x, ./img/photo-4-desktop@2x.jpg 2x" width="400" height="267">
+                    <source media="(min-width: 768px)" srcset="./img/photo-4-tablet.jpg 1x, ./img/photo-4-tablet@2x.jpg 2x" width="324" height="267">
+                    <img class="card__img" src="./img/photo-4-mobile.jpg" srcset="./img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Каньон">
+                  </picture>
+                </a>
                 <div class="card__container">
                   <div class="card__text-wrap">
                     <h3 class="card__title caption caption--card">Мост дьявола</h3>
@@ -147,6 +168,9 @@
               <use href="img/sprite.svg#play-marker"></use>
               </svg>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="./img/video-desktop.webp 1x, ./img/video-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/video-mobile.webp 1x, ./video-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="./img/video-desktop.jpg 1x, ./img/video-desktop@2x.jpg 2x" width="800" height="500">
                 <source media="(min-width: 768px)" srcset="./img/video-tablet.jpg 1x, ./img/video-tablet@2x.jpg 2x" width="648" height="500">
                 <img class="presentation__video" src="./img/video-mobile.jpg" srcset="./img/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видео-заглушка">
@@ -185,7 +209,7 @@
           </li>
         </ul>
         <p class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
             <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#copyright"></use>

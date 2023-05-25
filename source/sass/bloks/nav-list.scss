@@ -38,8 +38,10 @@
     font-size: 14px;
     line-height: 21px;
     min-width: 153px;
+    max-height: 56px;
     padding: 18px 0;
     box-shadow: none;
+    box-sizing: border-box;
   }
 
   .nav-list__item:nth-child(2) {

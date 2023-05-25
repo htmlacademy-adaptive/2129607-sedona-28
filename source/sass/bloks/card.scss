@@ -4,10 +4,19 @@
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   @media (max-width: variables.$tablet-width) {
     padding: 0 20px;
     box-sizing: border-box;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: #f2f2f2;
+
+    &:not(:first-child):nth-child(2n-1) {
+      background-color: #eaeaea;
+    }
   }
 }
 
@@ -17,14 +26,7 @@
   margin-top: 25px;
 
   @media (min-width: variables.$tablet-width) {
-    background-color: #f2f2f2;
     margin-top: 0;
-  }
-}
-
-@media (min-width: variables.$tablet-width) {
-  .card:not(:first-child):nth-child(2n-1) .card__wrap {
-    background-color: #eaeaea;
   }
 }
 
@@ -52,16 +54,32 @@
   }
 }
 
+.card__img-link {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card__img {
   display: block;
   min-width: 280px;
   width: 100%;
   object-fit: cover;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 267px;
+
+    .card:first-child & {
+      min-height: 400px;
+    }
+  }
 }
 
 .card__text-wrap {
   @media (min-width: variables.$tablet-width) {
     margin-top: 8px;
+    padding-bottom: 5px;
+    max-width: 72%;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -78,11 +96,11 @@
   }
 }
 
-.crad:first-child .card__text-wrap {
-  @media (min-width: variables.$tablet-width) {
-    margin-top: 5px;
-  }
-}
+// .card:first-child .card__text-wrap {
+//   @media (min-width: variables.$tablet-width) {
+//     margin-top: 5px;
+//   }
+// }
 
 .card__likes-button {
   border: none;
@@ -105,7 +123,7 @@
 }
 
 .card__number {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
