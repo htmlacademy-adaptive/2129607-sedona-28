@@ -1,7 +1,6 @@
 @use "../variables.scss";
 
 .intro {
-  margin-top: 56px;
   width: 100%;
 }
 
@@ -44,7 +43,7 @@
     background-image: url("../img/intro-bg-mobile@2x.jpg");
 
     @media (min-width: variables.$tablet-width) {
-      background-image: url("../img/intro-bg-desktop.jpg");
+      background-image: url("../img/intro-bg-desktop@2x.jpg");
     }
   }
 }
@@ -82,6 +81,7 @@
 
 .intro--inner .intro__image {
   margin-top: 52px;
+  max-width: 229px;
 
   @media (min-width: variables.$tablet-width) {
     max-width: 457px;

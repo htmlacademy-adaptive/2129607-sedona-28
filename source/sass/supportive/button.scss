@@ -4,7 +4,7 @@
 .button {
   background: variables.$secondary-color;
   color: variables.$common-color;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -13,6 +13,7 @@
   padding: 16px 49px;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
 
   &:hover {
     background-color: #669ec0;

@@ -4,10 +4,19 @@
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   @media (max-width: variables.$tablet-width) {
     padding: 0 20px;
     box-sizing: border-box;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: #f2f2f2;
+
+    &:not(:first-child):nth-child(2n-1) {
+      background-color: #eaeaea;
+    }
   }
 }
 
@@ -17,14 +26,7 @@
   margin-top: 25px;
 
   @media (min-width: variables.$tablet-width) {
-    background-color: #f2f2f2;
     margin-top: 0;
-  }
-}
-
-@media (min-width: variables.$tablet-width) {
-  .card:not(:first-child):nth-child(2n-1) .card__wrap {
-    background-color: #eaeaea;
   }
 }
 
@@ -47,9 +49,14 @@
     box-sizing: border-box;
     z-index: 2;
     color: variables.$common-color;
-
     background-color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.card__img-link {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card__img {
@@ -57,11 +64,21 @@
   min-width: 280px;
   width: 100%;
   object-fit: cover;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 267px;
+
+    .card:first-child & {
+      min-height: 400px;
+    }
+  }
 }
 
 .card__text-wrap {
   @media (min-width: variables.$tablet-width) {
     margin-top: 8px;
+    padding-bottom: 5px;
+    max-width: 72%;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -78,12 +95,6 @@
   }
 }
 
-.crad:first-child .card__text-wrap {
-  @media (min-width: variables.$tablet-width) {
-    margin-top: 5px;
-  }
-}
-
 .card__likes-button {
   border: none;
   background-color: transparent;
@@ -93,6 +104,12 @@
   padding: 0;
   fill-opacity: 0.3;
 
+  &:hover,
+  &:focus,
+  &:active {
+    fill-opacity: 1;
+  }
+
   @media (min-width: variables.$tablet-width) {
     margin-top: 24px;
   }
@@ -101,11 +118,17 @@
     color: variables.$common-color;
     fill-opacity: 1;
     margin-top: 23px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill-opacity: 0.9;
+    }
   }
 }
 
 .card__number {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;

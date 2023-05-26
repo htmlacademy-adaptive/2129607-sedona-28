@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
 
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img class="main-header__logo-image" src="./img/logo.svg" width="185" height="96" alt="Городок Седона">
       </a>
-      <nav class="main-nav main-nav--open">
-        <button class="main-nav__toggle main-nav__toggle--close" type="button">
+      <!-- Класс main-nav--closed для закрытия меню, main-nav--nojs для отключенного JS -->
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
           <ul class="main-nav__list nav-list">
@@ -125,9 +128,9 @@
             <fieldset class="feedback__group feedback__group--emotions">
               <h3 class="feedback__title caption">Опишите свои эмоции:</h3>
               <div class="feedback__container">
-              <label class="feedback__field-wrap">
-                <textarea class="feedback__message" name="feedback__message" rows="5">Опишите подробно все свои восторги</textarea>
-              </label>
+              <div class="feedback__field-wrap">
+                <textarea class="feedback__message" name="feedback__message" rows="5" aria-label="Опишите свои впечатления от посещения Седоны">Опишите подробно все свои восторги</textarea>
+              </div>
             </div>
             </fieldset>
             <div class="feedback__button-wrap">
@@ -169,7 +172,7 @@
           </li>
         </ul>
         <p class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
             <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#copyright"></use>
