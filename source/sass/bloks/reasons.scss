@@ -42,13 +42,6 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
-      // flex-direction: row;
-      // flex-wrap: wrap;
-      // justify-content: space-between;
-
-      // &:nth-child(2) {
-      //   flex-direction: row-reverse;
-      // }
     }
   }
 
@@ -117,7 +110,6 @@
 
   @media (max-width: variables.$mobile-only) {
     border-bottom: solid 1px #d6d6d6;
-
   }
 
   @media (min-width: variables.$tablet-width) {
