@@ -96,12 +96,6 @@
   }
 }
 
-// .card:first-child .card__text-wrap {
-//   @media (min-width: variables.$tablet-width) {
-//     margin-top: 5px;
-//   }
-// }
-
 .card__likes-button {
   border: none;
   background-color: transparent;
@@ -111,6 +105,12 @@
   padding: 0;
   fill-opacity: 0.3;
 
+  &:hover,
+  &:focus,
+  &:active {
+    fill-opacity: 1;
+  }
+
   @media (min-width: variables.$tablet-width) {
     margin-top: 24px;
   }
@@ -119,6 +119,12 @@
     color: variables.$common-color;
     fill-opacity: 1;
     margin-top: 23px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill-opacity: 0.9;
+    }
   }
 }
 

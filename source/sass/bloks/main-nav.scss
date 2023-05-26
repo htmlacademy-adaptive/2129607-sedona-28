@@ -1,7 +1,7 @@
 @use "../variables.scss";
 
 .main-nav {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,8 +20,12 @@
       display: none;
     }
 
-    &--open .main-nav__list {
-      display: flex;
+    &--open {
+      position: absolute;
+
+      & .main-nav__list {
+        display: flex;
+      }
     }
 
     &--no-js {
@@ -73,7 +77,15 @@
   background-color: variables.$secondary-color;
 
   @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     background-color: transparent;
+
+    &::after {
+      content: "";
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
   }
 }
 

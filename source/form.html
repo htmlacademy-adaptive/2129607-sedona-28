@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
@@ -126,9 +128,9 @@
             <fieldset class="feedback__group feedback__group--emotions">
               <h3 class="feedback__title caption">Опишите свои эмоции:</h3>
               <div class="feedback__container">
-              <label class="feedback__field-wrap" aria-label="Опишите свои впечатления от посещения Седоны">
-                <textarea class="feedback__message" name="feedback__message" rows="5">Опишите подробно все свои восторги</textarea>
-              </label>
+              <div class="feedback__field-wrap">
+                <textarea class="feedback__message" name="feedback__message" rows="5" aria-label="Опишите свои впечатления от посещения Седоны">Опишите подробно все свои восторги</textarea>
+              </div>
             </div>
             </fieldset>
             <div class="feedback__button-wrap">

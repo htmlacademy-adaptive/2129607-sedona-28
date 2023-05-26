@@ -2,10 +2,6 @@
 
 .intro {
   width: 100%;
-
-  @media (max-width: variables.$mobile-only) {
-    margin-top: 56px;
-  }
 }
 
 .intro__wrapper {
@@ -47,7 +43,7 @@
     background-image: url("../img/intro-bg-mobile@2x.jpg");
 
     @media (min-width: variables.$tablet-width) {
-      background-image: url("../img/intro-bg-desktop.jpg");
+      background-image: url("../img/intro-bg-desktop@2x.jpg");
     }
   }
 }
